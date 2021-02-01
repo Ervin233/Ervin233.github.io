@@ -1,0 +1,54 @@
+<html> 
+<head> 
+    <meta charset="utf-8"> 
+    <title>Gæt et nummer</title> 
+      
+    
+    </style> 
+</head> 
+  
+<body> 
+<h1>Gæt tallet</h1> 
+  
+<p>vælg et nummer mellem 1 - 10.  
+</p> 
+  
+<div class="SPIL"> 
+    <label for="guessField">skriv et gæt: </label> 
+    <input type = "text" id = "guessField" class = "guessField"> 
+    <input type = "submit" value = "Submit guess" 
+           class = "guessSubmit" id = "submitguess"> 
+</div> 
+  
+<script type = "text/javascript"> 
+
+    var y = Math.floor(Math.random() * 10 + 1); 
+      
+    // Tæller hvor mange gange man har gættet
+    var guess = 1; 
+      
+    document.getElementById("submitguess").onclick = function(){ 
+      
+   // tal gættet af brugeren  
+   var x = document.getElementById("guessField").value; 
+  
+   if(x == y) 
+   {     
+       alert("tillykke du gættede det rigtige "
+               + guess + " Forsøg "); 
+   } 
+   else if(x > y) 
+                   
+   {     
+       guess++; 
+       alert("prøv et mindre tal"); 
+   } 
+   else
+   { 
+       guess++; 
+       alert("Prøv et andet tal") 
+   } 
+} 
+</script> 
+</body> 
+</html>                     
